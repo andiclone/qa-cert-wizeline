@@ -7,6 +7,7 @@ class CheckoutPage {
         this.lastName = Selector('#last-name');
         this.zipCode = Selector('#postal-code');
         this.continueButton = Selector('.btn_primary.cart_button');
+        this.errorText = Selector('.error-button');
     }
 
     async fillCheckoutForm(firstName, lastName, zipCode) {
