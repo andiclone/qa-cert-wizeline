@@ -1,0 +1,25 @@
+{
+  "name": "qa-cert-wizeline",
+  "version": "1.0.0",
+  "description": "",
+  "Author": "Andres Alejandre",
+  "main": "index.js",
+  "scripts": {
+    "test-all-chrome": "testcafe chrome ./page_model/test/Login.test.js",
+    "test-all-safari": "testcafe safari ./page_model/test/Login.test.js",
+    "test-all-firefox": "testcafe firefox ./page_model/test/Login.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andiclone/qa-cert-wizeline.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andiclone/qa-cert-wizeline/issues"
+  },
+  "homepage": "https://github.com/andiclone/qa-cert-wizeline#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0"
+  }
+}
