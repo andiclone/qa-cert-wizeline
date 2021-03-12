@@ -2,9 +2,10 @@
 
 You will need to have NPM and NodeJS installed in your computer to run this code.
 
-### Get Started Immediately
+## Getting Started
 
 You will need to do an `npm install` before running the code.  
+
 Once you have the dependencies installed, you can run the tests cases defined in the *package.json* e.g. `npm run test-all-chrome`
 
 ## Please note
@@ -19,3 +20,7 @@ INVALID_PASSWORD=****
 ```
 
 Just replace those values with the real ones that you can check on https://www.saucedemo.com/
+
+## Author
+
+* **Andrés Alejandre** - *Full Stack Developer* - [Andiclone](https://github.com/andiclone)

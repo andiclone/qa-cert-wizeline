@@ -6,6 +6,7 @@ class LoginPage {
         this.userPasswordField = Selector('#password');
         this.userLoginButton = Selector('#login-button');
         this.userErrorMessage = Selector('h3').withText('Epic sadface: ');
+        this.pageTitle = Selector('.login_logo');
     }
 
     async submitLoginForm(username, password) {

@@ -7,7 +7,6 @@ fixture('Login feature testing')
 
 //test.skip and test.only to change which tests are run
 test('Users can login user valid credentials', async t => {
-    console.log('credentials user: ', CREDENTIALS.VALID_USER.USERNAME);
     await LoginPage.submitLoginForm(CREDENTIALS.VALID_USER.USERNAME, CREDENTIALS.VALID_USER.PASSWORD);
 
     await t.expect(SwagLabPage.pageTitle.exists).ok();
@@ -18,4 +17,11 @@ test('Users cannot login user valid credentials', async t => {
 
     await t.expect(LoginPage.userErrorMessage.exists).ok()
     await t.expect(LoginPage.userErrorMessage.innerText).eql('Epic sadface: Username and password do not match any user in this service')
+});
+
+test('Users can logout', async t => {
+    await LoginPage.submitLoginForm(CREDENTIALS.VALID_USER.USERNAME, CREDENTIALS.VALID_USER.PASSWORD);
+    await SwagLabPage.submitLogout();
+
+    await t.expect(LoginPage.pageTitle.exists).ok();
 });
