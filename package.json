@@ -1,14 +1,17 @@
 {
   "name": "qa-cert-wizeline",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
   "Author": "Andres Alejandre",
   "main": "index.js",
   "scripts": {
-    "test-all-chrome": "testcafe chrome ./page_model/test/Login.test.js",
-    "test-all-safari": "testcafe safari ./page_model/test/Login.test.js",
-    "test-all-firefox": "testcafe firefox ./page_model/test/Login.test.js",
-    "test-all-browsers": "testcafe chrome,safari,firefox ./page_model/test/Login.test.js"
+    "test-all-chrome": "testcafe chrome ./page_model/tests/",
+    "test-all-safari": "testcafe safari ./page_model/tests/",
+    "test-all-firefox": "testcafe firefox ./page_model/tests/",
+    "test-all-browsers": "testcafe chrome,safari,firefox ./page_model/tests/",
+    "test-chrome-json": "testcafe chrome ./page_model/tests/ --reporter json:./page_model/reports/report.json",
+    "test-chrome-html": "testcafe chrome ./page_model/tests/ --reporter html:./page_model/reports/report.html",
+    "test-chrome-debug": "testcafe chrome ./page_model/tests -d"
   },
   "repository": {
     "type": "git",
@@ -21,6 +24,7 @@
   },
   "homepage": "https://github.com/andiclone/qa-cert-wizeline#readme",
   "dependencies": {
-    "dotenv": "^8.2.0"
+    "dotenv": "^8.2.0",
+    "testcafe-reporter-html": "^1.4.6"
   }
 }
